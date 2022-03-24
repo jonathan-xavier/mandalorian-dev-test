@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="box">
+  <section>
+    <div class="container-title">
+      <h1>Formulário de Task</h1>
+    </div>
+  </section>
+
+  <section>
+    <form [formGroup]="formTask">
+      <div class="grid-container">
+        <div>
+          <span>key:</span>
+          <input id="task-input" formControlName="key" type="text" name="key" />
+          <span>value:</span>
+          <input
+            id="task-input"
+            formControlName="value"
+            type="text"
+            name="value"
+          />
+        </div>
+        <div>
+          <!-- depois colocar o metodo de validação do campo -->
+          <button mat-raised-button color="primary" (click)="validation()">
+            Add Task
+          </button>
+        </div>
+      </div>
+    </form>
+  </section>
+</div>
